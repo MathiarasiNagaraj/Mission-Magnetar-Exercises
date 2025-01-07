@@ -1,0 +1,1 @@
+console.log('custom  static js');

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_index" />
+    <body>
+        <!-- You can add or remove blocks as needed -->
+        <referenceContainer name="content">
+            <block class="Magento\Checkout\Block\Cart" name="custom.cart" template="Magento_Checkout::cart.phtml">
+                <container name="form.additional.info" label="Form Additional Info" />
+                <block class="Magento\Checkout\Block\Cart\Item\Renderer" name="checkout.cart.item.renderer" as="renderer" template="Magento_Checkout::cart/item/default.phtml">
+                    <container name="checkout.cart.item.renderer.actions" as="actions" label="Cart Item Actions" htmlTag="div" htmlClass="actions">
+                        <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Remove" name="checkout.cart.item.renderer.actions.remove" template="Magento_Checkout::cart/item/renderer/actions/remove.phtml"/>
+                        <block class="Magento\Checkout\Block\Cart\Item\Renderer\Actions\Edit" name="checkout.cart.item.renderer.actions.edit" template="Magento_Checkout::cart/item/renderer/actions/edit.phtml"/>
+                    </container>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

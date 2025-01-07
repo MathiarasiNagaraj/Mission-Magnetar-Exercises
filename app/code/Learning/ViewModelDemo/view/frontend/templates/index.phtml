@@ -1,0 +1,11 @@
+<?php
+$viewModel = $block->getData('viewModel');
+$stringArray = $viewModel->getStringArray();
+?>
+
+<ul>
+    <h1>hi view model</h1>
+    <?php foreach ($stringArray as $string): ?>
+        <li><?php echo $string; ?></li>
+    <?php endforeach; ?>
+</ul>

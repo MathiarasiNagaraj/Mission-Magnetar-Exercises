@@ -1,0 +1,17 @@
+body{
+    color:#9c4343;
+}
+button.action.primary {
+    border: 1px solid #af936c;
+    max-width: 120px;
+    color: #242424;
+    font-size: 11px;
+    border-width: 2px;
+    display: block;
+    margin: 0 auto 24px;
+    padding: 9px 0;
+    letter-spacing: 2px;
+    background-color: transparent;
+    font-family: "Garamond Premier Pro", Arial, sans-serif;
+    font-weight: 100;
+}

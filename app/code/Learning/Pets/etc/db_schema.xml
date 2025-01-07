@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="learning_pets" resource="default" engine="innodb" comment="Pets Table">
+        <column xsi:type="int" name="pet_id" padding="10" unsigned="true" nullable="false" comment="Pet ID" identity="true"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="false" comment="Magento Customer ID"/>
+        <column xsi:type="varchar" name="pet_name" nullable="false" length="255" comment="Pet Name"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="pet_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="CUSTOMER_ID" table="pets" column="customer_id" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+</schema>

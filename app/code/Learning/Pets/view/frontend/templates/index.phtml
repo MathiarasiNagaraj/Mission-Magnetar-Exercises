@@ -1,0 +1,11 @@
+<?php
+/** @var \Learning\Pets\Block\PetsList $block */
+$pets = $block->getPets();
+?>
+
+<ul>
+    Hi in Pets
+    <?php foreach ($pets as $pet): ?>
+        <li><?php echo $pet->getPetName() . ' (' . $pet->getPetType() . ')'; ?></li>
+    <?php endforeach; ?>
+</ul>

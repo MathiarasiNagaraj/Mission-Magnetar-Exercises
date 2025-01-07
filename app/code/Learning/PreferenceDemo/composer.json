@@ -1,0 +1,15 @@
+{
+
+    "name": "learning/module-preferencedemo",
+    "description": "prefrence exercise module for footer method overriding using prefrence",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "files": [
+        "registration.php"
+      ]
+    }
+}
